@@ -8,9 +8,9 @@ public class OrderEventArgs : EventArgs
 {
     public Order Order { get; }
 
+    // Stores the given order in the Order property so event listeners can read it.
     public OrderEventArgs(Order order)
     {
-        // TODO: Part A, demo
-        throw new NotImplementedException();
+        Order = order;
     }
 }
