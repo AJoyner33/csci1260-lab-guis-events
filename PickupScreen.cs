@@ -15,16 +15,17 @@ public class PickupScreen
     }
 
     // Subscribe OnOrderReady to the bar's OrderReady event.
+    // Subscribes this screen's handler to the bar's OrderReady event
     public void Connect(CoffeeBar bar)
     {
-        // TODO: Part B, demo
-        throw new NotImplementedException();
+        bar.OrderReady += OnOrderReady; 
     }
 
     // Runs every time the bar raises OrderReady.
+    // Adds a "Ready: #number customer" line to the screen when an order is ready
     private void OnOrderReady(object? sender, OrderEventArgs e)
     {
-        // TODO: Part B, demo
-        throw new NotImplementedException();
+        lines.Add($"Ready: #{e.Order.Number} {e.Order.Customer}");
+    
     }
 }
