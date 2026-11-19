@@ -36,7 +36,6 @@ public class CoffeeBar
     // Creates a numbered order, adds it to the back of the line, raises OrderPlaced, and returns it.
     public Order Place(string customer, string drink)
     {
-        // TODO: Part A, demo
         Order order = new Order(nextNumber, customer, drink);
         nextNumber++;
         waiting.Enqueue(order);
@@ -49,7 +48,6 @@ public class CoffeeBar
     // Removes the oldest waiting order, raises OrderReady, raises AllCaughtUp if the line is now empty, and returns the order.
     public Order FinishNext()
     {
-        // TODO: Part A, demo. Then Exercise 1: announce AllCaughtUp when
         // the order you just finished was the last one in line.
         if (waiting.Count == 0)
         {

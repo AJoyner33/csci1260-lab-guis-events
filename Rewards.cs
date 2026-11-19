@@ -26,9 +26,7 @@ public class Rewards
         bar.OrderReady += OnOrderReady;
     }
 
-    // TODO: Exercise 2. Write the handler here. Add one to the customer's
-    // count, and when the count reaches a multiple of DrinksPerReward,
-    // raise FreeDrinkEarned.
+
     // Counts the customer's finished drinks and raises FreeDrinkEarned on every third one
     private void OnOrderReady(object? sender, OrderEventArgs e)
     {
